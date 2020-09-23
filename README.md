@@ -12,8 +12,8 @@ Securing an API using AAD appRoles
 ### Server App Registration
 
 * Edit the AAD manifest
-  * Add 2x `appRoles`
-  * Set `accessTokenAcceptedVersion: 2`
+  * Add 3x `appRoles`: [Reader, Writer, and Admin] (see below)
+  * Set `accessTokenAcceptedVersion: 2` - this is important because `@azure/identity` only gets v2 tokens
 
 Example snippet:
 
@@ -68,5 +68,5 @@ Example snippet:
 
 ## Client App Registration
 
-* Add a clientSecret
+* Add a clientSecret - used to authenticate the client. In production, you'd want to use a Managed Identity instead if possible
 * Use API Permissions to assign Reader & Writer roles. Grant admin consent (requires Azure AD Global Admin)
