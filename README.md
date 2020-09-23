@@ -69,4 +69,4 @@ Example snippet:
 ## Client App Registration
 
 * Add a clientSecret
-* Use API Permissions to assign Reader role
+* Use API Permissions to assign Reader & Writer roles. Grant admin consent (requires Azure AD Global Admin)
