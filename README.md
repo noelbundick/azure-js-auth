@@ -13,7 +13,7 @@ Securing an API using AAD appRoles
 
 * Edit the AAD manifest
   * Add 3x `appRoles`: [Reader, Writer, and Admin] (see below)
-  * Set `accessTokenAcceptedVersion: 2` - this is important because `@azure/identity` only gets v2 tokens
+  * Set `accessTokenAcceptedVersion: 2` - this is important because we have `passport-azure-ad` configured with v2 metadata, so we'll be validating against v2 tokens
 
 Example snippet:
 
